@@ -6,6 +6,15 @@ using UnityEngine;
 public class TicTacToeGrid : MonoBehaviour
 {
 
+//TODO make more state based
+//each round check: (players both moves)
+//1 available move
+//2 if none, check winning move
+//2 if none, draw
+//3 Set/switch to active player 
+//4 if allow play (so gridActive variable or something)
+//start new round
+
     [SerializeField] private List<TicTacToeTile> m_Tiles = new List<TicTacToeTile>();
 
     private int choicesX = 4;

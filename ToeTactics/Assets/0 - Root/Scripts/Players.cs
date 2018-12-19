@@ -35,6 +35,7 @@ public class Players : MonoBehaviour {
 		}
 	}
 	private IEnumerator SwitchActivePlayer() {
+		//move the delay and blocker to grid
 		playing = false;
 
 		yield return new WaitForSeconds(0.3f);
@@ -45,6 +46,8 @@ public class Players : MonoBehaviour {
 
 		movesLeft = 2;
 		activePlayerIndex = activePlayerIndex == 1 ? 0 : 1;
+
+		//juice this up
 		m_playerOneImage.SetActive(activePlayerIndex == 0);
 		m_playerTwoImage.SetActive(activePlayerIndex != 0);
 
