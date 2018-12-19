@@ -1,11 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Players : MonoBehaviour {
 
-    [SerializeField] private GameObject m_playerOneImage;
-    [SerializeField] private GameObject m_playerTwoImage;
+    [SerializeField] private Image m_playerOneImage;
+    [SerializeField] private Image m_playerTwoImage;
 
 
 	public int activePlayerIndex = 0;
@@ -48,8 +49,14 @@ public class Players : MonoBehaviour {
 		activePlayerIndex = activePlayerIndex == 1 ? 0 : 1;
 
 		//juice this up
-		m_playerOneImage.SetActive(activePlayerIndex == 0);
-		m_playerTwoImage.SetActive(activePlayerIndex != 0);
+		if(activePlayerIndex == 0) {
+			m_playerOneImage.color = Color.white;
+			m_playerTwoImage.color = new Color(255,255,255,0.4f);
+
+		} else {
+			m_playerOneImage.color = new Color(255,255,255,0.4f);
+			m_playerTwoImage.color = Color.white;
+		}
 
 	}
 }

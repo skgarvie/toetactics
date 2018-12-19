@@ -15,10 +15,16 @@ public class TicTacToeGrid : MonoBehaviour
 //4 if allow play (so gridActive variable or something)
 //start new round
 
+//need a gamemanager
+
     [SerializeField] private List<TicTacToeTile> m_Tiles = new List<TicTacToeTile>();
 
     private int choicesX = 4;
     private int choicesO = 4;
+
+    public bool canPlay = false;
+    public int lastRowIndex = 0;
+    public int lastColumnIndex = 0;
 
     // Use this for initialization
     void Start()
@@ -31,6 +37,15 @@ public class TicTacToeGrid : MonoBehaviour
     {
 
     }
+
+    public void CheckBoard() {
+        //Check for win
+        //check row of lastRowIndex
+        //check col of lastColumnIndex
+        //check diagonal ... maybe only if last was center or corner
+    }
+
+
 
     [ContextMenu("Setup Grid")]
     public void SetupGrid()
