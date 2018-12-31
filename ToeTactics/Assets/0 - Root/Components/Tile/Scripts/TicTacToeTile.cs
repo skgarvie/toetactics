@@ -49,7 +49,6 @@ public class TicTacToeTile : MonoBehaviour
             case 1: //x
                 _frontCard.sprite = m_frontX;
                 _lockedSprite = m_lockedX;
-
                 break;
         }
     }
@@ -90,12 +89,11 @@ public class TicTacToeTile : MonoBehaviour
     }
     public void SelectTile()
     {
-		if(!GameObject.FindObjectOfType<Players>().playing) return;
+		if(!GameObject.FindObjectOfType<GameManager>().CanPlay()) return;
         if (locked) return;
 
 		var activePlayer = GameObject.FindObjectOfType<Players>().activePlayerIndex;
-		GameObject.FindObjectOfType<Players>().MakeMove();
-
+        GameObject.FindObjectOfType<TicTacToeGrid>().MakeMove(column, row, value);
         if (!revealed)
         {
             FlipCard(true, activePlayer);

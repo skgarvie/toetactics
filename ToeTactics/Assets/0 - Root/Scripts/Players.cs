@@ -27,23 +27,29 @@ public class Players : MonoBehaviour {
 		
 	}
 
-	public void MakeMove() {
+	public void MakeMove() {	
 		movesLeft--;
-		if(movesLeft == 1) {
-		}
+	}
+
+	public void SetActivePlayer() {
 		if(movesLeft <= 0) { //switch Player
 			StartCoroutine(SwitchActivePlayer());
+		} else {
+			GameObject.FindObjectOfType<GameManager>().SetCanPlay(true);
 		}
 	}
+
+	public void SetStartingPlayer() {
+		m_playerOneImage.color = Color.white;
+		m_playerTwoImage.color = new Color(255,255,255,0.4f);
+	}
+
 	private IEnumerator SwitchActivePlayer() {
 		//move the delay and blocker to grid
-		playing = false;
 
 		yield return new WaitForSeconds(0.3f);
 		grid.FlipUnlocked();
 		yield return new WaitForSeconds(0.3f);
-
-		playing = true;
 
 		movesLeft = 2;
 		activePlayerIndex = activePlayerIndex == 1 ? 0 : 1;
@@ -52,11 +58,12 @@ public class Players : MonoBehaviour {
 		if(activePlayerIndex == 0) {
 			m_playerOneImage.color = Color.white;
 			m_playerTwoImage.color = new Color(255,255,255,0.4f);
-
 		} else {
 			m_playerOneImage.color = new Color(255,255,255,0.4f);
 			m_playerTwoImage.color = Color.white;
 		}
+
+		GameObject.FindObjectOfType<GameManager>().SetCanPlay(true);
 
 	}
 }

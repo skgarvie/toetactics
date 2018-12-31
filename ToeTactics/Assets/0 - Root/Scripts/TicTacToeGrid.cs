@@ -22,27 +22,78 @@ public class TicTacToeGrid : MonoBehaviour
     private int choicesX = 4;
     private int choicesO = 4;
 
+    private int winningPattern;
+
     public bool canPlay = false;
     public int lastRowIndex = 0;
     public int lastColumnIndex = 0;
+    public int lastValue = 2;
 
     // Use this for initialization
-    void Start()
+    public void Start()
     {
-        SetupGrid();
     }
 
     // Update is called once per frame
-    void Update()
+    public void Update()
     {
 
     }
 
-    public void CheckBoard() {
-        //Check for win
-        //check row of lastRowIndex
-        //check col of lastColumnIndex
-        //check diagonal ... maybe only if last was center or corner
+    public bool CheckBoard() 
+    { //make more states. currently true means game still going
+        var state = true;
+        // check column for win
+        var column = m_Tiles.Where(tile => tile.column == lastColumnIndex);
+        
+        if (column.Any(tile => tile.value != lastValue) || column.Any(tile => !tile.revealed)) {
+            //column not equal
+            state = true;
+        } else {
+            //column equal
+            state = false;
+            Debug.Log("Column Matches");
+            return state;
+        }
+
+        var row = m_Tiles.Where(tile => tile.row == lastRowIndex);
+        if (row.Any(tile => tile.value != lastValue) || row.Any(tile => !tile.revealed)) {
+            //row not equal
+            state = true;
+        } else {
+            //row equal
+            state = false;
+            Debug.Log("Row Matches");
+            return state;
+        }
+
+        if (winningPattern == 3) //diagonal 1
+        {
+            var tile1 = m_Tiles.Where(tile => tile.column == 0 && tile.row == 0).First();
+            var tile2 = m_Tiles.Where(tile => tile.column == 1 && tile.row == 1).First();
+            var tile3 = m_Tiles.Where(tile => tile.column == 2 && tile.row == 2).First();
+            if(((tile1.value == tile2.value) && (tile2.value == tile3.value)) && (tile1.revealed && tile2.revealed && tile3.revealed)) {
+                //diagonal equal
+                state = false;
+                Debug.Log("Diagonal Matches");
+                return state;
+            }
+        }
+        
+        if (winningPattern == 4) //diagonal 2
+        {
+            var tile1 = m_Tiles.Where(tile => tile.column == 0 && tile.row == 2).First();
+            var tile2 = m_Tiles.Where(tile => tile.column == 1 && tile.row == 1).First();
+            var tile3 = m_Tiles.Where(tile => tile.column == 2 && tile.row == 0).First();
+            if(((tile1.value == tile2.value) && (tile2.value == tile3.value)) && (tile1.revealed && tile2.revealed && tile3.revealed)) {
+                //diagonal equal
+                state = false;
+                Debug.Log("Diagonal Matches");
+                return state;
+            }
+        }
+
+        return state;
     }
 
 
@@ -53,7 +104,7 @@ public class TicTacToeGrid : MonoBehaviour
         Debug.Log("Setting up Grid");
 
         var winningValue = Random.Range(0, 1); //randomly choose x or o as winner
-        var winningPattern = Random.Range(0, 7); //randomly choose 1 of 8 winning patters 0-2 column 3-4 diagonal 5-7 row
+        winningPattern = Random.Range(0, 7); //randomly choose 1 of 8 winning patters 0-2 column 3-4 diagonal 5-7 row
 
         //make one tile blank?
         if (winningValue == 0)
@@ -154,6 +205,16 @@ public class TicTacToeGrid : MonoBehaviour
         {
             tile.FlipCard(false);
         }
+    }
+
+    public void MakeMove(int col, int row, int value)
+    {
+        GameObject.FindObjectOfType<GameManager>().SetCanPlay(false);
+		GameObject.FindObjectOfType<Players>().MakeMove();
+        lastRowIndex = row;
+        lastColumnIndex = col;
+        lastValue = value;
+        GameObject.FindObjectOfType<GameManager>().CheckBoardState();
     }
 	
 }
