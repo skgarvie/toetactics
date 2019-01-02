@@ -577,6 +577,11 @@ Prefab:
       propertyPath: PlayerColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114890088069697260, guid: a2b43165657364d7b92fe0be25127961,
+        type: 2}
+      propertyPath: m_HPBar
+      value: 
+      objectReference: {fileID: 1537530601}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2b43165657364d7b92fe0be25127961, type: 2}
   m_IsPrefabAsset: 0
@@ -1886,6 +1891,11 @@ Prefab:
       propertyPath: PlayerName
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114890088069697260, guid: a2b43165657364d7b92fe0be25127961,
+        type: 2}
+      propertyPath: m_HPBar
+      value: 
+      objectReference: {fileID: 1954152162}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a2b43165657364d7b92fe0be25127961, type: 2}
   m_IsPrefabAsset: 0
@@ -1957,6 +1967,7 @@ MonoBehaviour:
   - {fileID: 205057916}
   - {fileID: 1506024761}
   activePlayer: {fileID: 0}
+  inactivePlayer: {fileID: 0}
   activePlayerIndex: 0
   maxMoves: 2
   movesLeft: 2
