@@ -59,12 +59,19 @@ public class TicTacToeTile : MonoBehaviour
         _frontCard.gameObject.SetActive(revealed);
         m_backCard.gameObject.SetActive(!revealed);
 
-		if(activePlayer == 1)
-		{
-            _frontCard.color = new Color(0, 255, 143, 255);
-        } else {
-			_frontCard.color = Color.white;
-		}
+        if(revealed) {
+            _frontCard.color = GameObject.FindObjectOfType<PlayerManager>().activePlayer.PlayerColor; 
+        }
+    }
+
+    public void ResetCard() {
+        locked = false;
+        revealed = false;
+        value = 2;
+        _frontCard.gameObject.SetActive(false);
+        m_backCard.gameObject.SetActive(true);
+        _frontCard.color = Color.white;
+        ownerIndex = -1;
     }
 
     public void LockCard(int _ownerIndex)

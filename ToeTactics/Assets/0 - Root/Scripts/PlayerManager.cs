@@ -10,6 +10,8 @@ public class PlayerManager : MonoBehaviour {
     [SerializeField] private List <Player> m_Players = new List<Player>();
 
 	public Player activePlayer = null;
+	public Player inactivePlayer = null;
+
 	public int activePlayerIndex = 0;
 	public  int maxMoves = 2;
 	public int movesLeft = 2;
@@ -41,8 +43,13 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 	public void SetStartingPlayer() {
-		activePlayer = m_Players[activePlayerIndex];
+		movesLeft = 2;
+		activePlayerIndex = 0;
+		activePlayer = m_Players[0];
+		inactivePlayer = m_Players[1]; //do smarter
+
 		activePlayer.SetAsActive();
+		inactivePlayer.SetAsInactive();
 	}
 
 	private IEnumerator SwitchActivePlayer() {
@@ -53,6 +60,7 @@ public class PlayerManager : MonoBehaviour {
 		yield return new WaitForSeconds(0.3f);
 
 		movesLeft = 2;
+		inactivePlayer = m_Players[activePlayerIndex];
 		activePlayerIndex = activePlayerIndex == 1 ? 0 : 1; //make take more than two players later
 		activePlayer = m_Players[activePlayerIndex];
 		activePlayer.SetAsActive();
