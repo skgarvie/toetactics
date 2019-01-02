@@ -18,7 +18,6 @@ public class GameManager : MonoBehaviour {
 		SetCanPlay(true);
 		m_TextField.color = Color.green;
 		m_TextField.text = "BEGIN!";  //make a text manager
-		Debug.Log("game starting");
 	}
 	
 	// Update is called once per frame
@@ -45,13 +44,10 @@ public class GameManager : MonoBehaviour {
 			var winningPlayer = m_PlayerManager.activePlayer;
 			m_TextField.color = winningPlayer.PlayerColor;
 			m_TextField.text = winningPlayer.PlayerName+" Wins!";
-			Debug.Log(winningPlayer.PlayerName+" Wins!!!!!!");
-			Debug.Log("game done");
 		}
 		//player 1 wins
 		//player 2 wins
 		//no more moves somehow
-		
 	}
 
 	public void ResetGame() {
