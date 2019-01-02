@@ -182,8 +182,6 @@ public class TicTacToeGrid : MonoBehaviour
                     Debug.Log("hmmmmm");
                 }
             }
-
-
         }
 
     }
@@ -210,7 +208,7 @@ public class TicTacToeGrid : MonoBehaviour
     public void MakeMove(int col, int row, int value)
     {
         GameObject.FindObjectOfType<GameManager>().SetCanPlay(false);
-		GameObject.FindObjectOfType<Players>().MakeMove();
+		GameObject.FindObjectOfType<PlayerManager>().MakeMove();
         lastRowIndex = row;
         lastColumnIndex = col;
         lastValue = value;

@@ -92,7 +92,7 @@ public class TicTacToeTile : MonoBehaviour
 		if(!GameObject.FindObjectOfType<GameManager>().CanPlay()) return;
         if (locked) return;
 
-		var activePlayer = GameObject.FindObjectOfType<Players>().activePlayerIndex;
+		var activePlayer = GameObject.FindObjectOfType<PlayerManager>().activePlayerIndex;
         GameObject.FindObjectOfType<TicTacToeGrid>().MakeMove(column, row, value);
         if (!revealed)
         {
