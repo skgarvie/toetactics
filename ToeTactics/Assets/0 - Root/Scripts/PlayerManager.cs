@@ -42,11 +42,11 @@ public class PlayerManager : MonoBehaviour {
 		}
 	}
 
-	public void SetStartingPlayer() {
+	public void SetStartingPlayer(int index) {
 		movesLeft = 2;
-		activePlayerIndex = 0;
-		activePlayer = m_Players[0];
-		inactivePlayer = m_Players[1]; //do smarter
+		activePlayerIndex = index;
+		activePlayer = m_Players[index];
+		inactivePlayer = m_Players[index == 0 ? 1 : 0]; //do smarter
 
 		activePlayer.SetAsActive();
 		inactivePlayer.SetAsInactive();

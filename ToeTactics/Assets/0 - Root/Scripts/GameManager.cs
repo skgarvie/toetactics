@@ -16,6 +16,8 @@ public class GameManager : MonoBehaviour
     // Use this for initialization
     void Start()
     {
+        SetCanPlay(false);
+        m_PlayerManager.SetStartingPlayer(0);
         StartCoroutine(BeginGame());
     }
 
@@ -27,13 +29,11 @@ public class GameManager : MonoBehaviour
 
     public IEnumerator BeginGame()
     {
-		SetCanPlay(false);
         m_GridManager.SetupGrid();
-        m_PlayerManager.SetStartingPlayer();
         m_TextField.color = m_TextDefaultColor;
         m_TextField.text = "BEGIN!";  //make a text manager
-		yield return new WaitForSeconds(1f);
-		m_TextField.text = ""; 
+        yield return new WaitForSeconds(1f);
+        m_TextField.text = "";
         SetCanPlay(true);
     }
 
@@ -59,12 +59,14 @@ public class GameManager : MonoBehaviour
         else
         {
             var winningPlayer = m_PlayerManager.activePlayer;
+            Debug.Log(winningPlayer.PlayerName);
+            m_TextField.color = winningPlayer.PlayerColor;
+            m_TextField.text = winningPlayer.PlayerName + " Wins Round!";
+
             winningPlayer.WinRound();
             var losingPlayer = m_PlayerManager.inactivePlayer;
             losingPlayer.LoseRound();
 
-            m_TextField.color = winningPlayer.PlayerColor;
-            m_TextField.text = winningPlayer.PlayerName + " Wins Round!";
             if (losingPlayer.hp <= 0)
             {
                 EndGame();
@@ -80,21 +82,26 @@ public class GameManager : MonoBehaviour
         //no more moves somehow
     }
 
-	private IEnumerator StartNewRound() {
-		yield return new WaitForSeconds(1f);
-		m_TextField.text = "";
-		m_GridManager.FlipAll();
-		yield return new WaitForSeconds(1f);
-		StartCoroutine(BeginGame());
-	}
+    private IEnumerator StartNewRound()
+    {
+        yield return new WaitForSeconds(1f);
+        m_TextField.text = "";
+        m_GridManager.FlipAll();
+        yield return new WaitForSeconds(1f);
+        var losingPlayerIndex = m_PlayerManager.activePlayerIndex == 0 ? 1 : 0;
+        m_PlayerManager.SetStartingPlayer(losingPlayerIndex);
+
+        StartCoroutine(BeginGame());
+    }
     private void EndGame()
     {
         var winningPlayer = m_PlayerManager.activePlayer;
+        m_TextField.color = winningPlayer.PlayerColor;
+        m_TextField.text = winningPlayer.PlayerName + " Wins GAME!";
         winningPlayer.WinGame();
         var losingPlayer = m_PlayerManager.inactivePlayer;
         losingPlayer.LoseGame();
-        m_TextField.color = winningPlayer.PlayerColor;
-        m_TextField.text = winningPlayer.PlayerName + " Wins GAME!";
+
     }
     public void ResetGame()
     {
