@@ -93,6 +93,7 @@ public class GameManager : MonoBehaviour
 
         StartCoroutine(BeginGame());
     }
+
     private void EndGame()
     {
         var winningPlayer = m_PlayerManager.activePlayer;
