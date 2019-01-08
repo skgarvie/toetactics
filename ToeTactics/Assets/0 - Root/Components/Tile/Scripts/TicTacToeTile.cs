@@ -25,6 +25,11 @@ public class TicTacToeTile : MonoBehaviour
 
     public bool locked = false;
 
+    //Move to audio manager
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClip m_FlipAudio;
+    [SerializeField] private AudioClip m_LockAudio;
+
     // Use this for initialization
     void Start()
     {
@@ -59,12 +64,15 @@ public class TicTacToeTile : MonoBehaviour
         _frontCard.gameObject.SetActive(revealed);
         m_backCard.gameObject.SetActive(!revealed);
 
-        if(revealed) {
-            _frontCard.color = GameObject.FindObjectOfType<PlayerManager>().activePlayer.PlayerColor; 
+        if (revealed)
+        {
+            GameObject.FindObjectOfType<AudioSource>().PlayOneShot(m_FlipAudio, 1f);
+            _frontCard.color = GameObject.FindObjectOfType<PlayerManager>().activePlayer.PlayerColor;
         }
     }
 
-    public void ResetCard() {
+    public void ResetCard()
+    {
         locked = false;
         revealed = false;
         value = 2;
@@ -79,15 +87,19 @@ public class TicTacToeTile : MonoBehaviour
         ownerIndex = _ownerIndex;
         locked = true;
         _frontCard.sprite = _lockedSprite;
+            
+        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(m_LockAudio, 1f);
+
+        
         if (_ownerIndex == 1)
         { //move this out
             _frontCard.color = new Color(0, 255, 143, 255);
         }
 
-		//CHECK IF Winning value (other 2 in line revealed and matching) call on grid
-		//coroutine
-		//if yes end game
-		//if no check if anymoves left
+        //CHECK IF Winning value (other 2 in line revealed and matching) call on grid
+        //coroutine
+        //if yes end game
+        //if no check if anymoves left
     }
 
     public void OnMouseDown()
@@ -96,10 +108,10 @@ public class TicTacToeTile : MonoBehaviour
     }
     public void SelectTile()
     {
-		if(!GameObject.FindObjectOfType<GameManager>().CanPlay()) return;
+        if (!GameObject.FindObjectOfType<GameManager>().CanPlay()) return;
         if (locked) return;
 
-		var activePlayer = GameObject.FindObjectOfType<PlayerManager>().activePlayerIndex;
+        var activePlayer = GameObject.FindObjectOfType<PlayerManager>().activePlayerIndex;
         GameObject.FindObjectOfType<TicTacToeGrid>().MakeMove(column, row, value);
         if (!revealed)
         {

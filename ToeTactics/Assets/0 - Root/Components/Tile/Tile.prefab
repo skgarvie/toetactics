@@ -131,12 +131,14 @@ MonoBehaviour:
   m_frontX: {fileID: 21300000, guid: ca662eb52ec4a490f9bf4e4ac3b26dc0, type: 3}
   m_lockedO: {fileID: 21300000, guid: 88b498c72226d4c6ea1988bf794cf4e2, type: 3}
   m_lockedX: {fileID: 21300000, guid: 1a503ff515a8746cb86a6571318dc9c2, type: 3}
-  _revealed: 1
+  revealed: 0
   ownerIndex: 0
   row: 0
   column: 0
   value: 2
   locked: 0
+  m_FlipAudio: {fileID: 8300000, guid: f06f40ea0c0044506afdd5f6605e3b1d, type: 3}
+  m_LockAudio: {fileID: 8300000, guid: 3df284e3c63574060b529081cb3e7fec, type: 3}
 --- !u!114 &114360386227711994
 MonoBehaviour:
   m_ObjectHideFlags: 1

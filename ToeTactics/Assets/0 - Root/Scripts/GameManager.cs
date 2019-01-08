@@ -10,12 +10,17 @@ public class GameManager : MonoBehaviour
     [SerializeField] private TicTacToeGrid m_GridManager;
     [SerializeField] private PlayerManager m_PlayerManager;
     [SerializeField] private Text m_TextField;
+    [SerializeField] private Text m_WinTextField;
+
+    [SerializeField] private GameObject m_Overlay;
+
     [SerializeField] private Color m_TextDefaultColor; //Move to a text manager
 
     private bool _canPlay = false;
     // Use this for initialization
     void Start()
     {
+        m_Overlay.SetActive(false);
         SetCanPlay(false);
         m_PlayerManager.SetStartingPlayer(0);
         StartCoroutine(BeginGame());
@@ -97,8 +102,10 @@ public class GameManager : MonoBehaviour
     private void EndGame()
     {
         var winningPlayer = m_PlayerManager.activePlayer;
-        m_TextField.color = winningPlayer.PlayerColor;
-        m_TextField.text = winningPlayer.PlayerName + " Wins GAME!";
+        m_Overlay.SetActive(true);
+        m_TextField.text = "";
+        m_WinTextField.color = winningPlayer.PlayerColor;
+        m_WinTextField.text = winningPlayer.PlayerName + "\n Wins GAME!!!!"; ;
         winningPlayer.WinGame();
         var losingPlayer = m_PlayerManager.inactivePlayer;
         losingPlayer.LoseGame();
@@ -107,6 +114,11 @@ public class GameManager : MonoBehaviour
     public void ResetGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void OnHomeButton()
+    {
+        SceneManager.LoadScene("Main");
     }
 
 }

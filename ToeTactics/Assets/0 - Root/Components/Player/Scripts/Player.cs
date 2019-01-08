@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Color m_ActiveColour;
     [SerializeField] private Color m_InactiveColour;
     [SerializeField] private Image m_HPBar;
+    [SerializeField] private int m_DmgAmount = 25;
+
     public int hp = 100;
 
 	private Coroutine flashCoroutine = null;
@@ -46,7 +48,7 @@ public class Player : MonoBehaviour
     {
         //juice this: sad
         SetAsInactive();
-        StartCoroutine(LoseHealth(20));
+        StartCoroutine(LoseHealth(m_DmgAmount));
     }
 
     public void WinRound()
@@ -118,7 +120,8 @@ public class Player : MonoBehaviour
 				
 		var time = 0.4f;
 		var t = 0.0f;
-        for (var i = 0; i < times; i++)
+        // for (var i = 0; i < times; i++)
+        while(true)
         {
 			time = 0.3f;
             t = 0.0f;
