@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private SpriteRenderer m_Sprite;
 
-    [SerializeField] private Image m_Image;
+    [SerializeField] private Animator m_Animator;
+
     public string PlayerName;
     public Color PlayerColor;
     [SerializeField] private Color m_ActiveColour;
@@ -16,7 +18,7 @@ public class Player : MonoBehaviour
 
     public int hp = 100;
 
-	private Coroutine flashCoroutine = null;
+    private Coroutine flashCoroutine = null;
     private float hpFade = 0.4f;
     // Use this for initialization
     void Start()
@@ -31,61 +33,43 @@ public class Player : MonoBehaviour
 
     public void SetAsActive()
     {
-        //juice this
-        m_Image.color = m_ActiveColour;
+        m_Sprite.color = m_ActiveColour;
         SetHPBarOpacity(1f);
     }
 
     public void SetAsInactive()
     {
-        //juice this
-        m_Image.color = m_InactiveColour;
+        m_Sprite.color = m_InactiveColour;
+
         SetHPBarOpacity(hpFade);
 
     }
 
     public void LoseRound()
     {
-        //juice this: sad
-        SetAsInactive();
+        SetAsActive();
+        m_Animator.SetTrigger("isHit");
         StartCoroutine(LoseHealth(m_DmgAmount));
     }
 
     public void WinRound()
     {
+        m_Animator.SetTrigger("attack");
         //juice this: bounce
-        flashCoroutine = StartCoroutine(Flash(3));
+        // flashCoroutine = StartCoroutine(Flash(3));
     }
 
     public void LoseGame()
     {
+        SetAsActive();
+        m_Animator.SetTrigger("loseGame");
         //notify game manager?
     }
 
     public void WinGame()
     {
-		if(flashCoroutine != null) {
-			StopCoroutine(flashCoroutine);
-			flashCoroutine = null;
-		}
-		StartCoroutine(Bounce(10));
         SetAsActive();
     }
-
-    private IEnumerator Flash(int times)
-    {
-        for (var i = 0; i < times; i++)
-        {
-            SetAsActive();
-            yield return new WaitForSeconds(0.3f);
-            SetAsInactive();
-            yield return new WaitForSeconds(0.3f);
-
-        }
-        m_Image.color = m_InactiveColour;
-		flashCoroutine = null;
-    }
-
     private void SetHPBarOpacity(float opacity)
     {
         var tempColor = m_HPBar.color;
@@ -110,20 +94,19 @@ public class Player : MonoBehaviour
         }
 
         m_HPBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, hp);
-
     }
 
     private IEnumerator Bounce(int times)
     {
-		var startPos = m_Image.gameObject.transform.position;
-		var endPos = new Vector3(m_Image.gameObject.transform.position.x, m_Image.gameObject.transform.position.y + 30, m_Image.gameObject.transform.position.z);
-				
-		var time = 0.4f;
-		var t = 0.0f;
+        var startPos = m_Sprite.gameObject.transform.position;
+        var endPos = new Vector3(m_Sprite.gameObject.transform.position.x, m_Sprite.gameObject.transform.position.y + 30, m_Sprite.gameObject.transform.position.z);
+
+        var time = 0.4f;
+        var t = 0.0f;
         // for (var i = 0; i < times; i++)
-        while(true)
+        while (true)
         {
-			time = 0.3f;
+            time = 0.3f;
             t = 0.0f;
 
             while (t < 1.0f)
@@ -131,11 +114,11 @@ public class Player : MonoBehaviour
                 t += Time.deltaTime / time;
 
                 var newPos = Vector3.Lerp(startPos, endPos, t);
-				m_Image.gameObject.transform.position = newPos;
+                m_Sprite.gameObject.transform.position = newPos;
                 yield return null;
             }
 
- 			m_Image.gameObject.transform.position  = startPos;
+            m_Sprite.gameObject.transform.position = startPos;
         }
 
     }

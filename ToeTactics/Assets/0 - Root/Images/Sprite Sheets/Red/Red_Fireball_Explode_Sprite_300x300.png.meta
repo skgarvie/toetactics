@@ -1,0 +1,1003 @@
+fileFormatVersion: 2
+guid: 8e3d700e2bb474c34b671e59b132b37c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Red_Fireball_Explode_Sprite_300x300_0
+    21300002: Red_Fireball_Explode_Sprite_300x300_1
+    21300004: Red_Fireball_Explode_Sprite_300x300_2
+    21300006: Red_Fireball_Explode_Sprite_300x300_3
+    21300008: Red_Fireball_Explode_Sprite_300x300_4
+    21300010: Red_Fireball_Explode_Sprite_300x300_5
+    21300012: Red_Fireball_Explode_Sprite_300x300_6
+    21300014: Red_Fireball_Explode_Sprite_300x300_7
+    21300016: Red_Fireball_Explode_Sprite_300x300_8
+    21300018: Red_Fireball_Explode_Sprite_300x300_9
+    21300020: Red_Fireball_Explode_Sprite_300x300_10
+    21300022: Red_Fireball_Explode_Sprite_300x300_11
+    21300024: Red_Fireball_Explode_Sprite_300x300_12
+    21300026: Red_Fireball_Explode_Sprite_300x300_13
+    21300028: Red_Fireball_Explode_Sprite_300x300_14
+    21300030: Red_Fireball_Explode_Sprite_300x300_15
+    21300032: Red_Fireball_Explode_Sprite_300x300_16
+    21300034: Red_Fireball_Explode_Sprite_300x300_17
+    21300036: Red_Fireball_Explode_Sprite_300x300_18
+    21300038: Red_Fireball_Explode_Sprite_300x300_19
+    21300040: Red_Fireball_Explode_Sprite_300x300_20
+    21300042: Red_Fireball_Explode_Sprite_300x300_21
+    21300044: Red_Fireball_Explode_Sprite_300x300_22
+    21300046: Red_Fireball_Explode_Sprite_300x300_23
+    21300048: Red_Fireball_Explode_Sprite_300x300_24
+    21300050: Red_Fireball_Explode_Sprite_300x300_25
+    21300052: Red_Fireball_Explode_Sprite_300x300_26
+    21300054: Red_Fireball_Explode_Sprite_300x300_27
+    21300056: Red_Fireball_Explode_Sprite_300x300_28
+    21300058: Red_Fireball_Explode_Sprite_300x300_29
+    21300060: Red_Fireball_Explode_Sprite_300x300_30
+    21300062: Red_Fireball_Explode_Sprite_300x300_31
+    21300064: Red_Fireball_Explode_Sprite_300x300_32
+    21300066: Red_Fireball_Explode_Sprite_300x300_33
+    21300068: Red_Fireball_Explode_Sprite_300x300_34
+    21300070: Red_Fireball_Explode_Sprite_300x300_35
+    21300072: Red_Fireball_Explode_Sprite_300x300_36
+    21300074: Red_Fireball_Explode_Sprite_300x300_37
+    21300076: Red_Fireball_Explode_Sprite_300x300_38
+    21300078: Red_Fireball_Explode_Sprite_300x300_39
+    21300080: Red_Fireball_Explode_Sprite_300x300_40
+    21300082: Red_Fireball_Explode_Sprite_300x300_41
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Android
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: WebGL
+    maxTextureSize: 512
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_0
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 217
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 243daf0c436084e77a043f719ea09a37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_1
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 212
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9f30dc565d5494e9783ff33c52a801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_2
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 217
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a508032e75824037a6e96ea527df602
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_3
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 207
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18a28dee3414a4cfba1c2e9f3f1b9703
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_4
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 202
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db8fad099e14b4620a2c9c3e958dc446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_5
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 92
+        width: 35
+        height: 120
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e079f273c57a3467b8067adde0cf182e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_6
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 202
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd44d416ab3294fbaa21c3df267a21ef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_7
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 207
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e6709bdab71948c9836ce69ccb0b7e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_8
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 197
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37e8c2a967bfb4e54b8074fe000410c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_9
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 97
+        width: 40
+        height: 110
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b261896ef4fc4a8f96a25724e560b69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_10
+      rect:
+        serializedVersion: 2
+        x: 1014
+        y: 197
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b92463db8a594b27a793d14b29c23a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_11
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 112
+        width: 80
+        height: 80
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a5c6547636534b038ece476d18b92c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_12
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 187
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cb8b05cb697e4574ac12b4b6cc70456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_13
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 182
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e02d4144a20349ef88cbad9e5d696f8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_14
+      rect:
+        serializedVersion: 2
+        x: 1004
+        y: 177
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b63e8c7f089fc4463a4c776497bed864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_15
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 182
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba634dcbbd71f41ef8712e7c34022e9d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_16
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 167
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0480d164e46c4e36b2cd1d033863f5c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_17
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 172
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ac0f6977a1cb4401a083f5411779f98
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_18
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 122
+        width: 20
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fddd20415fd3d488198c929e37d028ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_19
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 162
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f6e8bea509994728be70a7fbc8480ab
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_20
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 162
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd1b28b92f6994da28b40d7ef9651528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_21
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 162
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcfc64ce9ef214507b10a64104819fd9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_22
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 157
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96d525246daae4e85a7d01a0cce1c8e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_23
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 142
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b233d639fbc524521aeb5ffc73cc6b40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_24
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 132
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccfe04f21519c43eba5a5b45fed3b09d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_25
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 132
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1fa6a8e801bf438b9970a30c684289d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_26
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 132
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e301ea906684172a00a2d423bc68ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_27
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 137
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf6646bf391a4cd0b04e2d518868bea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_28
+      rect:
+        serializedVersion: 2
+        x: 719
+        y: 127
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c0b3bfc74f943b08e4491acf564855
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_29
+      rect:
+        serializedVersion: 2
+        x: 1009
+        y: 122
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9ad28f2c83eb44779a7cfaf483285df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_30
+      rect:
+        serializedVersion: 2
+        x: 989
+        y: 122
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcfe256340af94a558711297df5524b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_31
+      rect:
+        serializedVersion: 2
+        x: 1044
+        y: 117
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34573f8358d5b45d98f3e239d5090f60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_32
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 112
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4194454781661444aa8c91b375266acf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_33
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 112
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e38755dca679940aca69db9fe6e46d7e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_34
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 87
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4299b246b98c949b88289ba009b95542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_35
+      rect:
+        serializedVersion: 2
+        x: 754
+        y: 87
+        width: 10
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8263b7852b1c84a539ef0bc8c71a0328
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_36
+      rect:
+        serializedVersion: 2
+        x: 1024
+        y: 92
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e670bec117fe74bd68b749c37e0000e3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_37
+      rect:
+        serializedVersion: 2
+        x: 1074
+        y: 92
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3888d2f8fd1304fcdacb4167c1b64e2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_38
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 87
+        width: 10
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ba8d79070a024586a9397eb2f20b61e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_39
+      rect:
+        serializedVersion: 2
+        x: 1019
+        y: 82
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 141b822c1e1f14b019b0eaaae649dc7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_40
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 82
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26bf4031e07e402f80596a994ee8898
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Red_Fireball_Explode_Sprite_300x300_41
+      rect:
+        serializedVersion: 2
+        x: 1059
+        y: 82
+        width: 5
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b4a7e321bc4646ab9e541d207bfa0c9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 0a2ca7cc9909a4656a1f20b86e5c1e6a
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
