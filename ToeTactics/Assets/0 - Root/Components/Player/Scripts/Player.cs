@@ -14,7 +14,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Color m_ActiveColour;
     [SerializeField] private Color m_InactiveColour;
     [SerializeField] private Image m_HPBar;
-    [SerializeField] private int m_DmgAmount = 25;
+    [SerializeField] private int m_DmgAmount = 35;
 
     public int hp = 100;
 
@@ -69,6 +69,8 @@ public class Player : MonoBehaviour
     public void WinGame()
     {
         SetAsActive();
+        m_Animator.SetTrigger("winGame");
+
     }
     private void SetHPBarOpacity(float opacity)
     {

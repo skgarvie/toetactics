@@ -55,7 +55,7 @@ public class PlayerManager : MonoBehaviour {
 	private IEnumerator SwitchActivePlayer() {
 		//move the delay and blocker to grid
 
-		yield return new WaitForSeconds(0.3f);
+		yield return new WaitForSeconds(0.8f);
 		grid.FlipUnlocked();
 		yield return new WaitForSeconds(0.3f);
 
