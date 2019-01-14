@@ -15,6 +15,8 @@ public class Player : MonoBehaviour
     [SerializeField] private Color m_InactiveColour;
     [SerializeField] private Image m_HPBar;
     [SerializeField] private int m_DmgAmount = 35;
+    [SerializeField] private Fireball m_Fireball;
+
 
     public int hp = 100;
 
@@ -48,13 +50,14 @@ public class Player : MonoBehaviour
     public void LoseRound()
     {
         SetAsActive();
-        m_Animator.SetTrigger("isHit");
+        StartCoroutine(TakeDamage());
         StartCoroutine(LoseHealth(m_DmgAmount));
     }
 
     public void WinRound()
     {
         m_Animator.SetTrigger("attack");
+        m_Fireball.Fire();
         //juice this: bounce
         // flashCoroutine = StartCoroutine(Flash(3));
     }
@@ -62,7 +65,8 @@ public class Player : MonoBehaviour
     public void LoseGame()
     {
         SetAsActive();
-        m_Animator.SetTrigger("loseGame");
+        StartCoroutine(TakeDamage(true));
+
         //notify game manager?
     }
 
@@ -79,6 +83,21 @@ public class Player : MonoBehaviour
         m_HPBar.color = tempColor;
     }
 
+    private IEnumerator TakeDamage(bool lethal = false)
+    {
+        yield return new WaitForSeconds(0.9f);
+        if (lethal)
+        {
+            m_Animator.SetTrigger("loseGame");
+
+        }
+        else
+        {
+            m_Animator.SetTrigger("isHit");
+
+        }
+
+    }
     private IEnumerator LoseHealth(int amount)
     {
         var startHp = hp;
