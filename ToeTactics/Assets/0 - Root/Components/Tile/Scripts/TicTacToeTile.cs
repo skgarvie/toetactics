@@ -66,7 +66,7 @@ public class TicTacToeTile : MonoBehaviour
 
         if (revealed)
         {
-            GameObject.FindObjectOfType<AudioSource>().PlayOneShot(m_FlipAudio, 1f);
+            GameObject.FindObjectOfType<GameManager>().GetComponent<AudioSource>().PlayOneShot(m_FlipAudio, 1f);
             _frontCard.color = GameObject.FindObjectOfType<PlayerManager>().activePlayer.PlayerColor;
         }
     }
@@ -88,7 +88,7 @@ public class TicTacToeTile : MonoBehaviour
         locked = true;
         _frontCard.sprite = _lockedSprite;
             
-        GameObject.FindObjectOfType<AudioSource>().PlayOneShot(m_LockAudio, 1f);
+        GameObject.FindObjectOfType<GameManager>().GetComponent<AudioSource>().PlayOneShot(m_LockAudio, 1f);
 
         
         if (_ownerIndex == 1)

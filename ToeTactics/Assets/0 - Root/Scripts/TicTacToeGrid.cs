@@ -29,6 +29,7 @@ public class TicTacToeGrid : MonoBehaviour
     public int lastColumnIndex = 0;
     public int lastValue = 2;
 
+    [SerializeField] private AudioClip m_FlipAllAudio;
     // Use this for initialization
     public void Start()
     {
@@ -213,7 +214,12 @@ public class TicTacToeGrid : MonoBehaviour
 
     public void FlipUnlocked()
     {
+
         var unlocked = m_Tiles.Where(tile => !tile.locked && tile.revealed);
+        if(unlocked.Count() >=  1) {
+            GameObject.FindObjectOfType<GameManager>().GetComponent<AudioSource>().PlayOneShot(m_FlipAllAudio, 1f);
+        }
+
         foreach (var tile in unlocked)
         {
             tile.FlipCard(false);
