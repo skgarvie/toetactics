@@ -8,6 +8,8 @@ public class IntroPlayer : MonoBehaviour
 {
 
     [SerializeField] private VideoPlayer videoPlayer;
+    [SerializeField] private bool canClick = true;
+    [SerializeField] private GameObject startButton;
 
     // Use this for initialization
     void Start()
@@ -19,11 +21,29 @@ public class IntroPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (canClick)
+        {
 
+            // var touch = Input.GetTouch(0);
+            // touch.phase == TouchPhase.Began
+            if (Input.GetMouseButtonDown(0))
+            {
+                canClick = false;
+                OnClick();
+            }
+        }
     }
 
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
-        UnityEngine.SceneManagement.SceneManager.LoadScene("Main");
+        canClick = true;
+        // startButton.SetActive(true);
     }
+
+    void OnClick()
+    {
+		SceneManager.LoadScene("Game");	
+
+    }
+
 }

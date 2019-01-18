@@ -188,6 +188,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayer: {fileID: 681496409}
+  canClick: 0
+  startButton: {fileID: 0}
 --- !u!1 &1187666307
 GameObject:
   m_ObjectHideFlags: 0
