@@ -43,7 +43,6 @@ public class IntroPlayer : MonoBehaviour
     void OnClick()
     {
 		SceneManager.LoadScene("Game");	
-
     }
 
 }

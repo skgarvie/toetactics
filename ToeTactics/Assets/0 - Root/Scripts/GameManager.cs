@@ -121,4 +121,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Main");
     }
 
+    public void ToggleAudio()
+    {
+        var audioPlayer = GetComponent<AudioSource>();
+        var musicPlayer = GameObject.Find("Music").GetComponent<AudioSource>();
+        audioPlayer.mute = !audioPlayer.mute;
+        musicPlayer.mute = !musicPlayer.mute;
+    }
 }
