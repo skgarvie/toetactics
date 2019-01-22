@@ -51,7 +51,6 @@ public class Player : MonoBehaviour
     {
         SetAsActive();
         StartCoroutine(TakeDamage());
-        StartCoroutine(LoseHealth(m_DmgAmount));
     }
 
     public void WinRound()
@@ -96,6 +95,8 @@ public class Player : MonoBehaviour
             m_Animator.SetTrigger("isHit");
 
         }
+                StartCoroutine(LoseHealth(m_DmgAmount));
+
 
     }
     private IEnumerator LoseHealth(int amount)

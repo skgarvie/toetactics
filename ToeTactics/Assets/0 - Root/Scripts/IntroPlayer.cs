@@ -14,7 +14,10 @@ public class IntroPlayer : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        videoPlayer.loopPointReached += EndReached;
+
+        StartCoroutine(PauseVideo());
+
+        // videoPlayer.loopPointReached += EndReached;
 
     }
 
@@ -37,12 +40,19 @@ public class IntroPlayer : MonoBehaviour
     void EndReached(UnityEngine.Video.VideoPlayer vp)
     {
         canClick = true;
-        // startButton.SetActive(true);
+        startButton.SetActive(true);
     }
 
+    public IEnumerator PauseVideo()
+    {
+        yield return new WaitForSeconds(14f);
+        videoPlayer.Pause();
+        canClick = true;
+        startButton.SetActive(true);
+    }
     void OnClick()
     {
-		SceneManager.LoadScene("Game");	
+        SceneManager.LoadScene("Game");
     }
 
 }
