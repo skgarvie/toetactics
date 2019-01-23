@@ -47,7 +47,7 @@ public class TicTacToeGrid : MonoBehaviour
         // check column for win
         var column = m_Tiles.Where(tile => tile.column == lastColumnIndex);
 
-        if (column.Any(tile => tile.value != lastValue) || column.Any(tile => !tile.revealed))
+        if (column.Any(tile => tile.value != lastValue) || column.Any(tile => !tile.locked))
         {
             //column not equal
             state = true;
@@ -61,7 +61,7 @@ public class TicTacToeGrid : MonoBehaviour
         }
 
         var row = m_Tiles.Where(tile => tile.row == lastRowIndex);
-        if (row.Any(tile => tile.value != lastValue) || row.Any(tile => !tile.revealed))
+        if (row.Any(tile => tile.value != lastValue) || row.Any(tile => !tile.locked))
         {
             //row not equal
             state = true;
@@ -79,7 +79,7 @@ public class TicTacToeGrid : MonoBehaviour
             var tile1 = m_Tiles.Where(tile => tile.column == 0 && tile.row == 0).First();
             var tile2 = m_Tiles.Where(tile => tile.column == 1 && tile.row == 1).First();
             var tile3 = m_Tiles.Where(tile => tile.column == 2 && tile.row == 2).First();
-            if (((tile1.value == tile2.value) && (tile2.value == tile3.value)) && (tile1.revealed && tile2.revealed && tile3.revealed))
+            if (((tile1.value == tile2.value) && (tile2.value == tile3.value)) && (tile1.locked && tile2.locked && tile3.locked))
             {
                 //diagonal equal
                 state = false;
@@ -93,7 +93,7 @@ public class TicTacToeGrid : MonoBehaviour
             var tile1 = m_Tiles.Where(tile => tile.column == 0 && tile.row == 2).First();
             var tile2 = m_Tiles.Where(tile => tile.column == 1 && tile.row == 1).First();
             var tile3 = m_Tiles.Where(tile => tile.column == 2 && tile.row == 0).First();
-            if (((tile1.value == tile2.value) && (tile2.value == tile3.value)) && (tile1.revealed && tile2.revealed && tile3.revealed))
+            if (((tile1.value == tile2.value) && (tile2.value == tile3.value)) && (tile1.locked && tile2.locked && tile3.locked))
             {
                 //diagonal equal
                 state = false;

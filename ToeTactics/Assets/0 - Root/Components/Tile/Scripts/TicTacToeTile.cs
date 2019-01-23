@@ -66,7 +66,6 @@ public class TicTacToeTile : MonoBehaviour
 
         if (revealed)
         {
-            GameObject.FindObjectOfType<GameManager>().GetComponent<AudioSource>().PlayOneShot(m_FlipAudio, 1f);
             _frontCard.color = GameObject.FindObjectOfType<PlayerManager>().activePlayer.PlayerColor;
         }
     }
@@ -88,7 +87,6 @@ public class TicTacToeTile : MonoBehaviour
         locked = true;
         _frontCard.sprite = _lockedSprite;
             
-        GameObject.FindObjectOfType<GameManager>().GetComponent<AudioSource>().PlayOneShot(m_LockAudio, 1f);
 
         
         if (_ownerIndex == 1)
@@ -112,14 +110,17 @@ public class TicTacToeTile : MonoBehaviour
         if (locked) return;
 
         var activePlayer = GameObject.FindObjectOfType<PlayerManager>().activePlayerIndex;
-        GameObject.FindObjectOfType<TicTacToeGrid>().MakeMove(column, row, value);
-        if (!revealed)
-        {
-            FlipCard(true, activePlayer);
-        }
-        else
-        {
+        
+        FlipCard(true, activePlayer);
+
+        if(GameObject.FindObjectOfType<PlayerManager>().movesLeft == 1) {
             LockCard(activePlayer);
+             GameObject.FindObjectOfType<GameManager>().GetComponent<AudioSource>().PlayOneShot(m_LockAudio, 1f);
+        } else {
+            GameObject.FindObjectOfType<GameManager>().GetComponent<AudioSource>().PlayOneShot(m_FlipAudio, 1f);
         }
+
+        GameObject.FindObjectOfType<TicTacToeGrid>().MakeMove(column, row, value);
+
     }
 }
