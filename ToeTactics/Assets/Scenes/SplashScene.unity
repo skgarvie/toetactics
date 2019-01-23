@@ -214,6 +214,7 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 0
   BGColor1: {r: 0.08235294, g: 0.5568628, b: 0.80392164, a: 0}
+  FadeColor: {r: 0.03529412, g: 0.14117648, b: 0.29803923, a: 1}
   IntroClips:
   - {fileID: 32900000, guid: a44212ee1ead863478d5335810bdb267, type: 3}
   - {fileID: 32900000, guid: 8da839b95718fad4b9de082f93a43c58, type: 3}
@@ -473,7 +474,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 0.03529412, g: 0.14117648, b: 0.29803923, a: 0}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -64,7 +64,6 @@ public class GameManager : MonoBehaviour
         else
         {
             var winningPlayer = m_PlayerManager.activePlayer;
-            Debug.Log(winningPlayer.PlayerName);
             m_TextField.color = winningPlayer.PlayerColor;
             m_TextField.text = winningPlayer.PlayerName + " Wins Round!";
 

@@ -12,6 +12,8 @@ public class SplashScreenController : MonoBehaviour
 	public Button FadeButton;
 	public AnimationCurve FadeOutCurve;
 	public Color BGColor1;
+	public Color FadeColor = Color.black;
+
 	public List<VideoClip> IntroClips = new List<VideoClip>();
     private VideoPlayer _videoPlayer;
 
@@ -53,7 +55,7 @@ public class SplashScreenController : MonoBehaviour
 
 		while (startTime <= endTime)
 		{
-			fadeImage.color = Color.Lerp(startingColor, Color.black, FadeOutCurve.Evaluate(startTime / endTime));
+			fadeImage.color = Color.Lerp(startingColor, FadeColor, FadeOutCurve.Evaluate(startTime / endTime));
 			yield return null;
 			startTime += Time.deltaTime;
 		}

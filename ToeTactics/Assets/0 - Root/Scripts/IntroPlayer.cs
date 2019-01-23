@@ -3,56 +3,60 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
+using UnityEngine.UI;
 
 public class IntroPlayer : MonoBehaviour
 {
+	public Button FadeButton;
 
     [SerializeField] private VideoPlayer videoPlayer;
     [SerializeField] private bool canClick = true;
     [SerializeField] private GameObject startButton;
 
+	public AnimationCurve FadeOutCurve;
+	public Color BGColor1;
+	public Color FadeColor = Color.black;
+
     // Use this for initialization
     void Start()
     {
-
         StartCoroutine(PauseVideo());
-
-        // videoPlayer.loopPointReached += EndReached;
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (canClick)
-        {
-
-            // var touch = Input.GetTouch(0);
-            // touch.phase == TouchPhase.Began
-            if (Input.GetMouseButtonDown(0))
-            {
-                canClick = false;
-                OnClick();
-            }
-        }
-    }
-
-    void EndReached(UnityEngine.Video.VideoPlayer vp)
-    {
-        canClick = true;
-        startButton.SetActive(true);
-    }
 
     public IEnumerator PauseVideo()
     {
-        yield return new WaitForSeconds(14f);
+        yield return new WaitForSeconds(12f);
         videoPlayer.Pause();
         canClick = true;
         startButton.SetActive(true);
     }
-    void OnClick()
+    public void OnClick()
     {
-        SceneManager.LoadScene("Game");
+        if(!canClick) {
+            return;
+        }
+
+        StartCoroutine(SplashScreenDone_Routine());
     }
+
+    	private IEnumerator SplashScreenDone_Routine()
+	{
+		var startTime = 0f;
+		var endTime = 1f;
+
+		var fadeImage = FadeButton.GetComponent<Image>();
+		var startingColor = fadeImage.color;
+		
+
+		while (startTime <= endTime)
+		{
+			fadeImage.color = Color.Lerp(startingColor, FadeColor, FadeOutCurve.Evaluate(startTime / endTime));
+			yield return null;
+			startTime += Time.deltaTime;
+		}
+		
+		SceneManager.LoadSceneAsync("Game");
+	}
 
 }

@@ -19,6 +19,7 @@ public class Player : MonoBehaviour
 
 
     public int hp = 100;
+    public int visualHp = 100;
 
     private Coroutine flashCoroutine = null;
     private float hpFade = 0.4f;
@@ -84,6 +85,8 @@ public class Player : MonoBehaviour
 
     private IEnumerator TakeDamage(bool lethal = false)
     {
+        hp = hp - m_DmgAmount <= 0 ? 0 : hp - m_DmgAmount;
+
         yield return new WaitForSeconds(0.9f);
         if (lethal)
         {
@@ -95,14 +98,15 @@ public class Player : MonoBehaviour
             m_Animator.SetTrigger("isHit");
 
         }
-                StartCoroutine(LoseHealth(m_DmgAmount));
+
+        StartCoroutine(LoseHealth(m_DmgAmount));
 
 
     }
     private IEnumerator LoseHealth(int amount)
     {
-        var startHp = hp;
-        hp = hp - amount <= 0 ? 0 : hp - amount;
+        var startHp = visualHp;
+        visualHp = visualHp - amount <= 0 ? 0 : visualHp - amount;
         var time = 1f;
         var t = 0.0f;
 
@@ -110,7 +114,7 @@ public class Player : MonoBehaviour
         {
             t += Time.deltaTime / time;
 
-            var newHp = Mathf.Lerp(startHp, hp, t);
+            var newHp = Mathf.Lerp(startHp, visualHp, t);
             m_HPBar.GetComponent<RectTransform>().SetSizeWithCurrentAnchors(RectTransform.Axis.Horizontal, newHp);
             yield return null;
         }
