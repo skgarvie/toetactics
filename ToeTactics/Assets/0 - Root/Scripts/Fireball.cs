@@ -9,6 +9,7 @@ public class Fireball : MonoBehaviour
     [SerializeField] private Vector3 m_EndPosition;
 
     [SerializeField] private float m_Speed = 1;
+    [SerializeField] private GameObject m_Shadow;
 
     private SpriteRenderer m_Sprite;
 
@@ -36,6 +37,7 @@ public class Fireball : MonoBehaviour
     private IEnumerator Travel()
     {
         m_Sprite.enabled = true;
+        m_Shadow.SetActive(true);
         var t = 0.0f;
 
         while (t < 1.0f)
@@ -48,6 +50,8 @@ public class Fireball : MonoBehaviour
         }
 
         m_Sprite.enabled = false;
+        m_Shadow.SetActive(false);
+
         yield return new WaitForSeconds(0.1f);
         transform.position = m_StartPosition;
 
